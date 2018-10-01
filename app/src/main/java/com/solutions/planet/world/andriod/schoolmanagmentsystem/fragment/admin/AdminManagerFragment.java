@@ -1,8 +1,9 @@
-package com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment;
+package com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.admin;
 
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,22 +13,21 @@ import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Student extends Fragment {
+public class AdminManagerFragment extends Fragment {
 
 
-    public Student() {
+    public AdminManagerFragment() {
         // Required empty public constructor
     }
+    public static final String TAG=AdminManagerFragment.class.getCanonicalName();
 
-    public static Fragment getInstance() {
-        return new Student();
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.i(TAG, "onCreateView: AdminManagerFragment");
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_student, container, false);
+        return inflater.inflate(R.layout.fragment_admin_manager, container, false);
     }
 
 }

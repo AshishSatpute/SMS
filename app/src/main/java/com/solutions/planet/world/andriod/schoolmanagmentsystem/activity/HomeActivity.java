@@ -10,9 +10,6 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.Admin;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.Student;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.Teacher;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -29,14 +26,13 @@ public class HomeActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         ActivityName = intent.getStringExtra("ActivityName");
-        //   textView.setText(ActivityName);
         Log.i(TAG, "onCreate: ActivityName:" + ActivityName);
 
 
-        if (!ActivityName.isEmpty()) {
+        /*if (!ActivityName.isEmpty()) {
             Log.i(TAG, "onCreate: not emply" + ActivityName);
-            if (ActivityName.contains("Admin")) {
-                loadFragment(Admin.getInstance());
+            if (ActivityName.contains("AdminActivity")) {
+                loadFragment(AdminActivity.getInstance());
             } else if (ActivityName.contains("Teacher")) {
                 Log.i(TAG, "onCreate: Teacher select");
                 loadFragment(Teacher.getInstance());
@@ -47,7 +43,7 @@ public class HomeActivity extends AppCompatActivity {
 
                 loadFragment(Student.getInstance());
             }
-        }
+        }*/
 
     }
 

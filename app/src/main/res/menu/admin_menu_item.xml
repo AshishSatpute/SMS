@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_message"
+            android:id="@+id/nav_dashboard"
 
-            android:title="Message" />
+            android:title="@string/dashboard" />
         <item
-            android:id="@+id/nav_chat"
+            android:id="@+id/nav_student_management"
 
-            android:title="Chat" />
+            android:title="@string/student_management" />
         <item
-            android:id="@+id/nav_profile"
+            android:id="@+id/nav_teacher_management"
 
-            android:title="Profile" />
+            android:title="@string/teacher_management" />
 
 
         <item
-            android:id="@+id/a"
+            android:id="@+id/nav_bus_management"
 
-            android:title="Message" />
+            android:title="@string/bus_management" />
+
+
         <item
-            android:id="@+id/aa"
+            android:id="@+id/nav_cost_management"
 
-            android:title="Chat" />
-        <item
-            android:id="@+id/aaa"
+            android:title="@string/cost_management" />
 
-            android:title="Profile" />
+
     </group>
 </menu>

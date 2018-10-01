@@ -1,11 +1,35 @@
 <resources>
-    <string name="app_name">SchoolManagmentSystem</string>
+    <string name="app_name">School Managment System</string>
     <string name="user_name">User Name :</string>
     <string name="password">Password :</string>
     <string name="user_type">User Type :</string>
     <string name="login">Login</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="admin_manager">Admin Manager</string>
+    <string name="teacher_manager">Teacher Manager</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="attendance">Attendance</string>
+    <string name="event">Event</string>
+    <string name="profile">Profile</string>
+    <string name="bus_pick_up">Bus Pick Up</string>
+    <string name="homework">Homework</string>
+    <string name="student_management">Student Management</string>
+    <string name="teacher_management">Teacher Management</string>
+    <string name="cost_management">Cost Management</string>
+    <string name="bus_management">Bus Management</string>
+    <string name="add_student">ADD STUDENT</string>
+    <string name="student_info">STUDENT INFO</string>
+    <string name="first_name">FIRST NAME</string>
+    <string name="middle_name">MIDDLE NAME</string>
+    <string name="last_name">LAST NAME</string>
+    <string name="gender">GENDER</string>
+    <string name="date_of_birth">DATE OF BIRTH</string>
+    <string name="email">EMAIL</string>
+    <string name="mobile_no">MOBILE NO</string>
+    <string name="religion">RELIGION</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment;
+package com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.student;
 
 
 import android.os.Bundle;
@@ -12,22 +12,19 @@ import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Teacher extends Fragment {
+public class StudentBusPickUpFragment extends Fragment {
 
 
-    public Teacher() {
+    public StudentBusPickUpFragment() {
         // Required empty public constructor
     }
 
-    public static Fragment getInstance() {
-        return new Teacher();
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_teacher, container, false);
+        return inflater.inflate(R.layout.fragment_student_bus_pick_up, container, false);
     }
 
 }
