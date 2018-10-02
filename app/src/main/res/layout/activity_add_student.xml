@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activity.admin.AddStudent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvAddStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGray300"
+            android:padding="16dp"
+            android:text="@string/add_student"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@id/tvStudentInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <TextView
+            android:id="@+id/tvStudentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:paddingStart="16dp"
+            android:text="@string/student_info"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@id/vLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAddStudent" />
+
+        <View
+            android:id="@+id/vLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray300"
+            app:layout_constraintBottom_toTopOf="@id/tvFirstName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStudentInfo" />
+
+        <TextView
+            android:id="@+id/tvFirstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/first_name"
+            app:layout_constraintEnd_toStartOf="@id/tvMiddleName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine" />
+
+        <TextView
+            android:id="@+id/tvMiddleName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/middle_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvFirstName"
+            app:layout_constraintTop_toBottomOf="@id/vLine" />
+
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etMiddleName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFirstName" />
+
+
+        <EditText
+            android:id="@+id/etMiddleName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etFirstName"
+            app:layout_constraintTop_toBottomOf="@id/tvMiddleName" />
+
+        <TextView
+            android:id="@+id/tvLastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/last_name"
+            app:layout_constraintEnd_toStartOf="@id/tvGender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etFirstName" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/gender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvLastName"
+            app:layout_constraintTop_toBottomOf="@id/etMiddleName" />
+
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etGender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLastName" />
+
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/etGender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/spinner_background"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etLastName"
+            app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+
+        <TextView
+            android:id="@+id/tvDateOfBirth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/date_of_birth"
+            app:layout_constraintEnd_toStartOf="@id/tvEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etLastName" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvDateOfBirth"
+            app:layout_constraintTop_toBottomOf="@id/etGender" />
+
+
+        <EditText
+            android:id="@+id/etDateOfBirth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDateOfBirth" />
+
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etDateOfBirth"
+            app:layout_constraintTop_toBottomOf="@id/tvDateOfBirth" />
+
+
+        <TextView
+            android:id="@+id/tvMobileNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/mobile_no"
+            app:layout_constraintEnd_toStartOf="@id/tvReligion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etDateOfBirth" />
+
+
+        <EditText
+            android:id="@+id/etMobileNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etReligion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMobileNo" />
+
+        <TextView
+            android:id="@+id/tvReligion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/religion"
+            app:layout_constraintBottom_toTopOf="@id/etReligion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvMobileNo"
+            app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+
+        <EditText
+            android:id="@+id/etReligion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etMobileNo"
+            app:layout_constraintTop_toBottomOf="@id/tvReligion" />
+
+
+        <TextView
+            android:id="@+id/tvStudentCast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/student_cast"
+            app:layout_constraintEnd_toStartOf="@id/tvStudentClass"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etMobileNo" />
+
+        <EditText
+            android:id="@+id/etStudentCast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etStudentClass"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStudentCast" />
+
+
+        <TextView
+            android:id="@+id/tvStudentClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/student_class"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvStudentCast"
+            app:layout_constraintTop_toBottomOf="@id/etReligion" />
+
+        <EditText
+            android:id="@+id/etStudentClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etStudentCast"
+            app:layout_constraintTop_toBottomOf="@id/tvStudentClass" />
+
+        <TextView
+            android:id="@+id/tvStudentFees"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/student_fees"
+            app:layout_constraintEnd_toStartOf="@id/tvUploadPhoto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etStudentCast" />
+
+        <TextView
+            android:id="@+id/tvUploadPhoto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/upload_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvStudentFees"
+            app:layout_constraintTop_toBottomOf="@id/etStudentClass" />
+
+
+        <EditText
+            android:id="@+id/etStudentFees"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etUploadPhoto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStudentFees" />
+
+
+        <EditText
+            android:id="@+id/etUploadPhoto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etStudentFees"
+            app:layout_constraintTop_toBottomOf="@id/tvUploadPhoto" />
+
+        <View
+            android:id="@+id/vLine1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorGray300"
+            app:layout_constraintBottom_toTopOf="@id/tvParentInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etStudentFees" />
+
+        <TextView
+            android:id="@+id/tvParentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:paddingStart="16dp"
+            android:text="@string/parent_info"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@id/vLine2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine1" />
+
+
+        <View
+            android:id="@+id/vLine2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray300"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvParentInfo" />
+
+
+        <TextView
+            android:id="@+id/tvFatherName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/father_name"
+            app:layout_constraintEnd_toStartOf="@id/tvMotherName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine2" />
+
+
+        <TextView
+            android:id="@+id/tvMotherName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/mother_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvFatherName"
+            app:layout_constraintTop_toBottomOf="@id/vLine2" />
+
+
+        <EditText
+            android:id="@+id/etFatherName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etMotherName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFatherName" />
+
+
+        <EditText
+            android:id="@+id/etMotherName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etFatherName"
+            app:layout_constraintTop_toBottomOf="@id/tvMotherName" />
+
+
+        <TextView
+            android:id="@+id/tvOccupation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/occupation"
+            app:layout_constraintEnd_toStartOf="@id/tvContact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etFatherName" />
+
+
+        <TextView
+            android:id="@+id/tvContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/contact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvOccupation"
+            app:layout_constraintTop_toBottomOf="@id/etMotherName" />
+
+
+        <EditText
+            android:id="@+id/etOccupation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etContact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOccupation" />
+
+
+        <EditText
+            android:id="@+id/etContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etOccupation"
+            app:layout_constraintTop_toBottomOf="@id/tvContact" />
+
+
+        <TextView
+            android:id="@+id/tvAltenateContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/altenate_contact"
+            app:layout_constraintEnd_toStartOf="@id/tvEmailP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etOccupation" />
+
+        <TextView
+            android:id="@+id/tvEmailP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvAltenateContact"
+            app:layout_constraintTop_toBottomOf="@id/etContact" />
+
+
+        <EditText
+            android:id="@+id/etAltenateContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etEmailP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAltenateContact" />
+
+
+        <EditText
+            android:id="@+id/etEmailP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etAltenateContact"
+            app:layout_constraintTop_toBottomOf="@id/tvEmailP" />
+
+
+        <TextView
+            android:id="@+id/tvReligionP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/religion"
+            app:layout_constraintEnd_toStartOf="@id/tvNational"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etAltenateContact" />
+
+        <TextView
+            android:id="@+id/tvNational"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/national"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvReligionP"
+            app:layout_constraintTop_toBottomOf="@id/etEmailP" />
+
+
+        <EditText
+            android:id="@+id/etReligionP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etNational"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvReligionP" />
+
+
+        <EditText
+            android:id="@+id/etNational"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etReligionP"
+            app:layout_constraintTop_toBottomOf="@id/tvNational" />
+
+
+        <TextView
+            android:id="@+id/tvState"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/state"
+            app:layout_constraintEnd_toStartOf="@id/tvDistrict"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etReligionP" />
+
+
+        <TextView
+            android:id="@+id/tvDistrict"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/district"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvState"
+            app:layout_constraintTop_toBottomOf="@id/etNational" />
+
+        <EditText
+            android:id="@+id/etState"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etDistrict"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvState" />
+
+
+        <EditText
+            android:id="@+id/etDistrict"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etState"
+            app:layout_constraintTop_toBottomOf="@id/tvDistrict" />
+
+
+        <TextView
+            android:id="@+id/tvTaluka"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/taluka"
+            app:layout_constraintEnd_toStartOf="@id/tvAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etState" />
+
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvTaluka"
+            app:layout_constraintTop_toBottomOf="@id/etDistrict" />
+
+        <EditText
+            android:id="@+id/etTaluka"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTaluka" />
+
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            app:layout_constraintBottom_toTopOf="@id/vLine3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etTaluka"
+            app:layout_constraintTop_toBottomOf="@id/tvAddress" />
+
+        <TextView
+            android:id="@+id/tvZipCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/zip_code"
+            app:layout_constraintBottom_toTopOf="@id/etZipCode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etTaluka" />
+
+
+        <EditText
+            android:id="@+id/etZipCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvZipCode" />
+
+
+        <View
+            android:id="@+id/vLine3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorGray300"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etZipCode" />
+
+
+        <TextView
+            android:id="@+id/tvAcademicInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:paddingStart="16dp"
+            android:text="@string/academic_info"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/vLine4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine3" />
+
+
+        <View
+            android:id="@+id/vLine4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray300"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAcademicInfo" />
+
+
+        <TextView
+            android:id="@+id/tvRegistrationNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/registration_no"
+            app:layout_constraintEnd_toStartOf="@id/tvRollNo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine4" />
+
+
+        <TextView
+            android:id="@+id/tvRollNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/roll_no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvRegistrationNo"
+            app:layout_constraintTop_toBottomOf="@id/vLine4" />
+
+
+        <EditText
+            android:id="@+id/etRegistrationNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etRollNo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRegistrationNo" />
+
+
+        <EditText
+            android:id="@+id/etRollNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etRegistrationNo"
+            app:layout_constraintTop_toBottomOf="@id/tvRollNo" />
+
+
+        <TextView
+            android:id="@+id/tvLastSchoolName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/last_school_name"
+            app:layout_constraintEnd_toStartOf="@id/tvMedium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etRegistrationNo" />
+
+
+        <TextView
+            android:id="@+id/tvMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvLastSchoolName"
+            app:layout_constraintTop_toBottomOf="@id/etRollNo" />
+
+
+        <EditText
+            android:id="@+id/etLastSchoolName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etMedium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLastSchoolName" />
+
+
+        <EditText
+            android:id="@+id/etMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etLastSchoolName"
+            app:layout_constraintTop_toBottomOf="@id/tvMedium" />
+
+
+        <TextView
+            android:id="@+id/tvClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/class1"
+            app:layout_constraintEnd_toStartOf="@id/tvLastStd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etLastSchoolName" />
+
+
+        <TextView
+            android:id="@+id/tvLastStd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/last_std"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvClass"
+            app:layout_constraintTop_toBottomOf="@id/etMedium" />
+
+
+        <EditText
+            android:id="@+id/etClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etLastStd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvClass" />
+
+
+        <EditText
+            android:id="@+id/etLastStd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etClass"
+            app:layout_constraintTop_toBottomOf="@id/tvLastStd" />
+
+
+        <TextView
+            android:id="@+id/tvMarkObtained"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/marks_obtained"
+            app:layout_constraintEnd_toStartOf="@id/tvSport"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etClass" />
+
+
+        <TextView
+            android:id="@+id/tvSport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:paddingTop="8dp"
+            android:text="@string/sports"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvMarkObtained"
+            app:layout_constraintTop_toBottomOf="@id/etLastStd" />
+
+
+        <EditText
+            android:id="@+id/etMarkObtained"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@id/etSports"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMarkObtained" />
+
+
+        <EditText
+            android:id="@+id/etSports"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_shape1"
+            android:inputType="textAutoComplete"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etMarkObtained"
+            app:layout_constraintTop_toBottomOf="@id/tvSport" />
+
+
+        <View
+            android:id="@+id/vLine5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorGray300"
+            app:layout_constraintBottom_toTopOf="@id/saveStudentInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etMarkObtained" />
+
+
+        <Button
+            android:onClick="save"
+            android:id="@+id/saveStudentInfo"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine5" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>

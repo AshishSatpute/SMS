@@ -31,5 +31,40 @@
     <string name="email">EMAIL</string>
     <string name="mobile_no">MOBILE NO</string>
     <string name="religion">RELIGION</string>
+    <string name="student_cast">STUDENT CAST</string>
+    <string name="student_class">STUDENT CLASS</string>
+    <string name="student_fees">STUDENT FEES</string>
+    <string name="upload_photo">UPLOAD PHOTO</string>
+    <string name="parent_info">PARENT INFO</string>
+    <string name="father_name">FATHER NAME</string>
+    <string name="mother_name">MOTHER NAME</string>
+    <string name="occupation">OCCUPATION</string>
+    <string name="contact">CONTACT</string>
+    <string name="alternate_contact">ALTERNATE CONTACT</string>
+    <string name="altenate_contact">ALTENATE CONTACT</string>
+    <string name="national">NATIONAL</string>
+    <string name="address">ADDRESS</string>
+    <string name="state">STATE</string>
+    <string name="district">DISTRICT</string>
+    <string name="zip_code">ZIP CODE</string>
+    <string name="taluka">TALUKA</string>
+    <string name="academic_info">ACADEMIC INFO</string>
+    <string name="registration_no">REGISTRATION NO</string>
+    <string name="roll_no">ROLL NO</string>
+    <string name="last_school_name">LAST SCHOOL NAME</string>
+    <string name="class1">CLASS</string>
+    <string name="last_std">LAST STD</string>
+    <string name="medium">MEDIUM</string>
+    <string name="sports">SPORTS</string>
+    <string name="marks_obtained">MARKS OBTAINED</string>
+    <string name="save">Save</string>
+    <string name="add_student1">Add Student</string>
+    <string name="student_list">STUDENT LIST</string>
+    <string name="search">Search</string>
+    <string name="students">STUDENTS</string>
+    <string name="id">Id</string>
+    <string name="name">NAME</string>
+
+
 
 </resources>

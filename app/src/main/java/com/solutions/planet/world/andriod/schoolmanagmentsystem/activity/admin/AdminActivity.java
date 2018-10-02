@@ -74,7 +74,8 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
             case R.id.nav_student_management:
                 Log.i(TAG, "onNavigationItemSelected: chick manager");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new StudentManagmentFragment()).commit();
+                    new StudentManagmentFragment()).commit();
+                /*startActivity(new Intent(this,AddStudent.class));*/
                 break;
             case R.id.nav_teacher_management:
                 Log.i(TAG, "onNavigationItemSelected: chick teacher manager");

@@ -21,7 +21,7 @@ import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.student
 
 public class StudentActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawer;
-    public static final String TAG=StudentActivity.class.getCanonicalName();
+    public static final String TAG = StudentActivity.class.getCanonicalName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
