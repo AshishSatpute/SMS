@@ -36,8 +36,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         spinner.setOnItemSelectedListener(this);
 
         List<String> categories = new ArrayList<>();
-        categories.add("--Select--");
-        categories.add("Admin");
+        categories.add("-- Select --");
         categories.add("Teacher");
         categories.add("Student");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, categories);
@@ -49,6 +48,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         item = parent.getItemAtPosition(position).toString();
     }
+
     @Override
     public void onNothingSelected(AdapterView<?> arg0) {
     }
@@ -56,15 +56,13 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     public void btnLogin(View view) {
         Log.i(TAG, "btnLogin: chick");
         if (!item.isEmpty()) {
-            if (item.contains("Admin"))
-                startActivity(new Intent(this, AdminActivity.class));
-            else if (item.contains("Student"))
+            if (item.contains("Student"))
                 startActivity(new Intent(context, StudentActivity.class));
             else if (item.contains("Teacher"))
                 startActivity(new Intent(context, TeacherActivity.class));
-            else if (item.contains("--Select--")){
+            else if (item.contains("--Select--")) {
                 Toast.makeText(context, "invalid user type", Toast.LENGTH_SHORT).show();
-                }
+            }
         }
 
     }

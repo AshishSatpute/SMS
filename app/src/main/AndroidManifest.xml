@@ -20,7 +20,17 @@
         <activity android:name=".activity.admin.AdminActivity" />
         <activity android:name=".activity.TeacherActivity" />
         <activity android:name=".activity.student.StudentActivity" />
-        <activity android:name=".activity.admin.AddStudent"></activity>
+        <activity android:name=".activity.admin.AddStudent" />
+        <activity android:name=".activity.student.Demo" />
+        <activity android:name=".activity.student.Attendance"/>
+        <activity android:name=".activity.student.TeacherComment" />
+        <activity android:name=".activity.student.Schedule" />
+        <activity android:name=".activity.student.Syllabus" />
+        <activity android:name=".activity.student.Homework" />
+        <activity android:name=".activity.student.Event" />
+        <activity android:name=".activity.student.BusPickUp">
+
+        </activity>
     </application>
 
 </manifest>

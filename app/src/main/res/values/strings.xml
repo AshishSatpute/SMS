@@ -64,7 +64,10 @@
     <string name="students">STUDENTS</string>
     <string name="id">Id</string>
     <string name="name">NAME</string>
-
+    <string name="teacher_comment">Teacher Comment</string>
+    <string name="schedule">Schedule</string>
+    <string name="syllabus">Syllabus</string>
+    <string name="october_03_2018_wednesday">October 03 2018 -Wednesday</string>
 
 
 </resources>
