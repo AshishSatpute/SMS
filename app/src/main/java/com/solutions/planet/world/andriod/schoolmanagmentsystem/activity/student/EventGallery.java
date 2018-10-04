@@ -2,18 +2,14 @@ package com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.studen
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 
-public class BusPickUp extends AppCompatActivity {
+public class EventGallery extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bus_pick_up);
-        Toolbar toolbar =  findViewById(R.id.toolbar); // get the reference of Toolbar
-        setSupportActionBar(toolbar);
-        // Setting/replace toolbar as the ActionBar
+        setContentView(R.layout.activity_event_gallery);
     }
 }

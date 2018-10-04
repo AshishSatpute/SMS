@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.teacher.TeacherHomeFragment">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvMyClass"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp">
+        <ImageView
+            android:layout_margin="8dp"
+            android:layout_gravity="start|center"
+            android:src="@drawable/gallery"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/myclass" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvAttendance"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:layout_margin="8dp"
+            android:layout_gravity="start|center"
+            android:src="@drawable/attendance"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/attendance" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvHomework"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp">
+        <ImageView
+            android:layout_margin="8dp"
+            android:layout_gravity="start|center"
+            android:src="@drawable/book"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/homework" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:layout_margin="8dp"
+            android:layout_gravity="start|center"
+            android:src="@drawable/comment"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/massage" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <!-- <android.support.v7.widget.CardView
+         android:id="@+id/cvAttendance"
+         android:layout_width="0dp"
+         android:layout_height="100dp"
+         android:layout_margin="8dp"
+         app:cardElevation="4dp"
+         app:cardBackgroundColor="@color/colorLightBlue100"
+         app:layout_constraintBottom_toTopOf="@id/cvBusMangement"
+         app:layout_constraintEnd_toStartOf="@id/cvTeacherManagement"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:gravity="center_vertical"
+             android:text="@string/myclass" />
+     </android.support.v7.widget.CardView>
+
+
+     <android.support.v7.widget.CardView
+         android:id="@+id/cvTeacherManagement"
+         android:layout_width="0dp"
+         android:layout_height="100dp"
+         android:layout_margin="8dp"
+         app:cardBackgroundColor="@color/colorPrimary"
+         app:layout_constraintBottom_toTopOf="@id/cvCostManagement"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@id/cvAttendance"
+         app:layout_constraintTop_toTopOf="parent">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:gravity="center_vertical"
+             android:text="@string/teacher_management" />
+     </android.support.v7.widget.CardView>
+
+     <android.support.v7.widget.CardView
+         android:id="@+id/cvBusMangement"
+         android:layout_width="0dp"
+         android:layout_height="100dp"
+         android:layout_margin="8dp"
+         app:cardBackgroundColor="@color/colorGray300"
+         app:layout_constraintEnd_toStartOf="@id/cvCostManagement"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/cvAttendance">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:gravity="center_vertical"
+             android:text="@string/bus_management" />
+     </android.support.v7.widget.CardView>
+
+     <android.support.v7.widget.CardView
+         android:id="@+id/cvCostManagement"
+         android:layout_width="0dp"
+         android:layout_height="100dp"
+         android:layout_margin="8dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@id/cvBusMangement"
+         app:layout_constraintTop_toBottomOf="@id/cvTeacherManagement">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:gravity="center_vertical"
+             android:text="@string/cost_management" />
+     </android.support.v7.widget.CardView>
+ -->
+
+</LinearLayout>

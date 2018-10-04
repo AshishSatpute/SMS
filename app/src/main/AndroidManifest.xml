@@ -18,19 +18,25 @@
         </activity>
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.admin.AdminActivity" />
-        <activity android:name=".activity.TeacherActivity" />
         <activity android:name=".activity.student.StudentActivity" />
         <activity android:name=".activity.admin.AddStudent" />
         <activity android:name=".activity.student.Demo" />
-        <activity android:name=".activity.student.Attendance"/>
+        <activity android:name=".activity.student.Attendance" />
         <activity android:name=".activity.student.TeacherComment" />
         <activity android:name=".activity.student.Schedule" />
         <activity android:name=".activity.student.Syllabus" />
         <activity android:name=".activity.student.Homework" />
         <activity android:name=".activity.student.Event" />
-        <activity android:name=".activity.student.BusPickUp">
-
-        </activity>
+        <activity android:name=".activity.student.BusPickUp" />
+        <activity android:name=".activity.student.EventGallery" />
+        <activity android:name=".activity.teacher.TeacherActivity" />
+        <activity android:name=".activity.teacher.StudentsAttendance" />
+        <activity
+            android:name=".activity.teacher.MyClass"
+            android:label="@string/title_activity_teacher_demo"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.teacher.AddHomework" />
+        <activity android:name=".activity.teacher.SendMsg"></activity>
     </application>
 
 </manifest>

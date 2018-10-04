@@ -14,6 +14,7 @@ import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student.Attendance;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student.BusPickUp;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student.Event;
+import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student.EventGallery;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student.Homework;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student.Schedule;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student.Syllabus;
@@ -28,7 +29,7 @@ public class StudentDashboardFragment extends Fragment implements View.OnClickLi
         // Required empty public constructor
     }
 
-    CardView cvProfile, cvStudentHomWork, cvEvent, cvBusPickUp, cvAttendance, cvComment, cvSchedule, cvHomework, cvSyllabus;
+    CardView cvProfile, cvStudentHomWork, cvEvent, cvBusPickUp, cvAttendance, cvComment, cvSchedule, cvHomework, cvSyllabus, cvEventGallery;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,6 +44,7 @@ public class StudentDashboardFragment extends Fragment implements View.OnClickLi
         cvSyllabus = view.findViewById(R.id.cvSyllabus);
         cvBusPickUp = view.findViewById(R.id.cvBusPickUp);
         cvEvent = view.findViewById(R.id.cvEvent);
+        cvEventGallery = view.findViewById(R.id.cvEventGallery);
 
         cvAttendance.setOnClickListener(this);
         cvComment.setOnClickListener(this);
@@ -51,6 +53,8 @@ public class StudentDashboardFragment extends Fragment implements View.OnClickLi
         cvSyllabus.setOnClickListener(this);
         cvBusPickUp.setOnClickListener(this);
         cvEvent.setOnClickListener(this);
+        cvEvent.setOnClickListener(this);
+        cvEventGallery.setOnClickListener(this);
 
 
         return view;
@@ -71,6 +75,12 @@ public class StudentDashboardFragment extends Fragment implements View.OnClickLi
                 /*getFragmentManager().beginTransaction().replace(R.id.fragment_container_student,
                         new StudentEventFragment()).commit();*/
                 startActivity(new Intent(getActivity(), Event.class));
+                break;
+
+            case R.id.cvEventGallery:
+                /*getFragmentManager().beginTransaction().replace(R.id.fragment_container_student,
+                        new StudentEventFragment()).commit();*/
+                startActivity(new Intent(getActivity(), EventGallery.class));
                 break;
 
             case R.id.cvAttendance:

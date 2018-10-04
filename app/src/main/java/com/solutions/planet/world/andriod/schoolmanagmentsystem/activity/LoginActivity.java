@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.admin.AdminActivity;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student.StudentActivity;
+import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.teacher.TeacherActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,8 +38,9 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
 
         List<String> categories = new ArrayList<>();
         categories.add("-- Select --");
-        categories.add("Teacher");
         categories.add("Student");
+        categories.add("Teacher");
+        categories.add("Bus");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, categories);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(dataAdapter);
@@ -59,10 +61,11 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
             if (item.contains("Student"))
                 startActivity(new Intent(context, StudentActivity.class));
             else if (item.contains("Teacher"))
-                startActivity(new Intent(context, TeacherActivity.class));
+                startActivity(new Intent(context,TeacherActivity.class));
             else if (item.contains("--Select--")) {
                 Toast.makeText(context, "invalid user type", Toast.LENGTH_SHORT).show();
             }
+
         }
 
     }

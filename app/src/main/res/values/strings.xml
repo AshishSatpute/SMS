@@ -69,6 +69,11 @@
     <string name="syllabus">Syllabus</string>
     <string name="october_03_2018_wednesday">October 03 2018 -Wednesday</string>
     <string name="event_gallery">Event Gallery</string>
+    <string name="in_time">In Time</string>
+    <string name="out_time">Out Time</string>
+    <string name="title_activity_teacher_demo">TeacherDemo</string>
+    <string name="myclass">MyClass</string>
+    <string name="massage">Massage</string>
 
 
 </resources>
