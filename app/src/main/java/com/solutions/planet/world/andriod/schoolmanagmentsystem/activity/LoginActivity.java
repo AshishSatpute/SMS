@@ -12,9 +12,10 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.admin.AdminActivity;
+import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.bus.BusActivity;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student.StudentActivity;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.teacher.TeacherActivity;
+import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.bus.BusFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +25,6 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     public static final String TAG = LoginActivity.class.getCanonicalName();
     Context context;
     String item;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, categories);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(dataAdapter);
+
     }
 
     @Override
@@ -61,9 +62,11 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
             if (item.contains("Student"))
                 startActivity(new Intent(context, StudentActivity.class));
             else if (item.contains("Teacher"))
-                startActivity(new Intent(context,TeacherActivity.class));
+                startActivity(new Intent(context, TeacherActivity.class));
             else if (item.contains("--Select--")) {
                 Toast.makeText(context, "invalid user type", Toast.LENGTH_SHORT).show();
+            } else if (item.contains("Bus")) {
+                startActivity(new Intent(context, BusActivity.class));
             }
 
         }

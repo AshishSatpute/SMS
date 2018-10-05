@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">School Managment System</string>
+    <string name="app_name">School Chale hum</string>
     <string name="user_name">User Name :</string>
     <string name="password">Password :</string>
     <string name="user_type">User Type :</string>
@@ -74,6 +74,7 @@
     <string name="title_activity_teacher_demo">TeacherDemo</string>
     <string name="myclass">MyClass</string>
     <string name="massage">Massage</string>
+    <string name="my_bus">My Bus</string>
 
 
 </resources>

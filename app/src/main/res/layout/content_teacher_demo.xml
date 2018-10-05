@@ -69,6 +69,7 @@
 
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cvcv"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:cardElevation="8dp"

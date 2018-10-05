@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.LoginActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,7 +37,12 @@
             android:label="@string/title_activity_teacher_demo"
             android:theme="@style/AppTheme" />
         <activity android:name=".activity.teacher.AddHomework" />
-        <activity android:name=".activity.teacher.SendMsg"></activity>
+        <activity android:name=".activity.teacher.SendMsg" />
+        <activity android:name=".fragment.bus.BusFragment" />
+        <activity android:name=".activity.bus.BusActivity" />
+        <activity android:name=".activity.TestActivity">
+
+        </activity>
     </application>
 
 </manifest>
