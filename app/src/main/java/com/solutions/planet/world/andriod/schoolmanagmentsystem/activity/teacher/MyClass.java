@@ -1,26 +1,45 @@
 package com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.teacher;
 
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
+import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.TestActivity;
+
+import java.util.List;
 
 public class MyClass extends AppCompatActivity {
 
     private LinearLayout mLayout;
     private EditText mEditText;
     private Button mButton;
+    Context context;
+
+
+    String data;
+    Spinner spinner;
+    Dialog dialog;
+    AlertDialog.Builder builder;
 
 
     CardView cardView;
@@ -33,83 +52,72 @@ public class MyClass extends AppCompatActivity {
         Log.i(TAG, "onCreate: ");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        mLayout = (LinearLayout) findViewById(R.id.linearLayout);
-        /*   mEditText = (EditText) findViewById(R.id.editText);*/
-        //  cardView = findViewById(R.id.cvcv);
-        TextView textView = new TextView(this);
-        textView.setText("New text");
+        context = MyClass.this;
+        mLayout =  findViewById(R.id.linearLayout);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //  mLayout.addView(createNewTextView(mEditText.getText().toString()));
-          //      mLayout.addView(createNewTextView());
-
-
-                CardView card = new CardView(MyClass.this);
-
-                // Set the CardView layoutParams
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.WRAP_CONTENT
-
-                );
-                card.setLayoutParams(params);
-
-                // Set CardView corner radius
-                card.setRadius(9);
-
-                params.setMargins(32,32,32,32);
-                params.gravity = 1;
-                // Set cardView content padding
-                card.setContentPadding(15, 15, 15, 15);
-
-                // Set a background color for CardView
-                card.setCardBackgroundColor(Color.parseColor("#FFFFFF"));
-
-                // Set the CardView maximum elevation
-                card.setMaxCardElevation(15);
-
-                // Set CardView elevation
-                card.setCardElevation(8);
-
-
-                // Initialize a new TextView to put in CardView
-                TextView tv = new TextView(MyClass.this);
-                tv.setLayoutParams(params);
-                tv.setText("2 std section A");
-               tv.setGravity(Gravity.CENTER_HORIZONTAL);
-                //tv.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 30);
-                //tv.setTextColor(Color.RED);
-
-                // Put the TextView in CardView
-                card.addView(tv);
-                card.getCardElevation();
-                // Finally, add the CardView in root layout
-                mLayout.addView(card);
-
+                openDialog();
             }
         });
     }
 
-    //createNewTextView(String text)
-   /* private  createNewTextView() {
-        *//*final LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
-        lparams.gravity = Gravity.CENTER_HORIZONTAL;
-         CardView cardView = new CardView(this);
-        cardView = findViewById(R.id.cvcv);
-        final TextView textView = new TextView(this);
-        textView.setLayoutParams(lparams);
-        textView.setText("9 std A section: "*//**//* + text*//**//*);
-        textView.setGravity(Gravity.CENTER_VERTICAL);
-        return textView;*//*
+    private void openDialog() {
+        builder = new AlertDialog.Builder(context);
+        builder.setTitle("select std");
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View view1 = inflater.inflate(R.layout.dailog_spinner, null);
+        builder.setView(view1);
+        builder.setTitle("Select Std");
+        spinner = view1.findViewById(R.id.spinner1);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(context,
+                android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.std_lists));
+        dataAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        spinner.setAdapter(dataAdapter);
+        builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                data = spinner.getSelectedItem().toString();
+                Toast.makeText(context, "" + data, Toast.LENGTH_SHORT).show();
+                createCard();
+            }
+        });
 
+        builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.create();
+        builder.show();
+    }
 
-    }*/
+    private void createCard() {
 
+        CardView card = new CardView(MyClass.this);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
 
-
+        );
+        card.setLayoutParams(params);
+        card.setRadius(9);
+        params.setMargins(32, 32, 32, 32);
+        params.gravity = 1;
+        card.setContentPadding(15, 15, 15, 15);
+        card.setCardBackgroundColor(Color.parseColor("#FFFFFF"));
+        card.setMaxCardElevation(15);
+        card.setCardElevation(16);
+        TextView tv = new TextView(MyClass.this);
+        tv.setLayoutParams(params);
+        tv.setText(data);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL);
+        card.addView(tv);
+        card.getCardElevation();
+        mLayout.addView(card);
+    }
 
 }

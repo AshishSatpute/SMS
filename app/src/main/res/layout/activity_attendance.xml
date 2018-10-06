@@ -37,7 +37,7 @@
 
     <include
         android:id="@+id/include"
-        layout="@layout/student_attendance_card"
+        layout="@layout/student_status_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"

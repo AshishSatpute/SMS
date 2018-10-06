@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.LoginActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.admin.AdminActivity" />
@@ -42,7 +42,14 @@
         <activity android:name=".activity.bus.BusActivity" />
         <activity android:name=".activity.TestActivity">
 
+
+
         </activity>
+        <activity
+            android:name=".activity.teacher.AttendanceListCollector"
+            android:label="Student List"
+            android:parentActivityName=".activity.teacher.StudentsAttendance"
+            android:theme="@style/AppTheme.MyTheme" />
     </application>
 
 </manifest>

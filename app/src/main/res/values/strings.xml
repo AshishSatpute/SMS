@@ -75,6 +75,15 @@
     <string name="myclass">MyClass</string>
     <string name="massage">Massage</string>
     <string name="my_bus">My Bus</string>
+    <string name="dummy_name">sachin Tendulkar</string>
 
+    <string-array name="std_lists">
+        <item>1 std section A</item>
+        <item>1 std section B</item>
+        <item>1 std section C</item>
+        <item>2 std section A</item>
+        <item>2 std section B</item>
+
+    </string-array>
 
 </resources>
