@@ -15,7 +15,6 @@ import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.bus.BusActivity;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student.StudentActivity;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.teacher.TeacherActivity;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.bus.BusFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +37,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
 
         List<String> categories = new ArrayList<>();
         categories.add("-- Select --");
-        categories.add("Student");
+        categories.add("Parent");
         categories.add("Teacher");
         categories.add("Bus");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, categories);
@@ -59,7 +58,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     public void btnLogin(View view) {
         Log.i(TAG, "btnLogin: chick");
         if (!item.isEmpty()) {
-            if (item.contains("Student"))
+            if (item.contains("Parent"))
                 startActivity(new Intent(context, StudentActivity.class));
             else if (item.contains("Teacher"))
                 startActivity(new Intent(context, TeacherActivity.class));

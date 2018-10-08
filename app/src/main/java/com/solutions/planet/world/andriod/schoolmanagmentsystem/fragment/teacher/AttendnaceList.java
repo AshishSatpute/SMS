@@ -10,16 +10,13 @@ import android.view.ViewGroup;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class AttendnaceList extends Fragment {
 
     public static final String TAG = AttendnaceList.class.getCanonicalName();
 
 
     public AttendnaceList() {
-        // Required empty public constructor
     }
 
 

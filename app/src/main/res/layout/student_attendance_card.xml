@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/student_attendance_card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -14,8 +15,10 @@
         app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -32,14 +35,28 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/tvname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/dummy_name"
+                android:textColor="@android:color/black"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/tvclass"
                 app:layout_constraintStart_toEndOf="@id/check"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvclass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="2 std A section"
+                app:layout_constraintEnd_toEndOf="@+id/tvname"
+                app:layout_constraintStart_toEndOf="@+id/check"
+                app:layout_constraintTop_toBottomOf="@id/tvname" />
 
             <Switch
                 android:layout_width="wrap_content"
@@ -49,8 +66,8 @@
                 android:scaleX="1.5"
                 android:scaleY="1.5"
                 android:showText="true"
-                android:textOff="A"
-                android:textOn="P"
+                android:textOff="@string/a"
+                android:textOn="@string/p"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
