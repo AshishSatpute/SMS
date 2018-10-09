@@ -52,6 +52,13 @@ context = TestActivity.this;
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.add_class);
         dialog.setCancelable(true);*/
+
+
+
+
+
+
+      
     }
 
 
