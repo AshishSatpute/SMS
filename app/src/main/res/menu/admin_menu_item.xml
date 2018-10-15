@@ -6,11 +6,11 @@
         <item
             android:id="@+id/nav_dashboard"
 
-            android:title="@string/dashboard" />
+            android:title="@string/profile" />
         <item
             android:id="@+id/nav_student_management"
 
-            android:title="@string/student_management" />
+            android:title="@string/dashboard" />
         <item
             android:id="@+id/nav_teacher_management"
 
@@ -28,6 +28,7 @@
 
             android:title="@string/cost_management" />
 
-
     </group>
+
+
 </menu>

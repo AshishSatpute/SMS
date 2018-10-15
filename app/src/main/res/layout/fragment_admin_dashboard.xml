@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.admin.AdminDashboardFragment">
 
-    <android.support.v7.widget.CardView
+    <!--<android.support.v7.widget.CardView
         android:id="@+id/cvStudentManagement"
         android:layout_width="0dp"
         android:layout_height="100dp"
@@ -78,7 +79,9 @@
             android:layout_gravity="center"
             android:gravity="center_vertical"
             android:text="@string/cost_management" />
-    </android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>-->
+
+
 
 
 </android.support.constraint.ConstraintLayout>

@@ -27,7 +27,7 @@ public class AdminDashboardFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         Log.i(TAG, "onCreateView: AdminDashboardFragment");
-        View view = inflater.inflate(R.layout.fragment_admin_dashboard, container, false);
+        View view = inflater.inflate(R.layout.teacher_profile, container, false);
         return view;
     }
 

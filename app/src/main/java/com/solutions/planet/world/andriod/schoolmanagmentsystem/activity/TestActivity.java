@@ -35,11 +35,11 @@ public class TestActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         Log.i(TAG, "onCreate: ");
-context = TestActivity.this;
+        context = TestActivity.this;
         // spinner = findViewById(R.id.sp);
         // spinner.setOnItemSelectedListener(TestActivity.this);
 
- categories = new ArrayList<>();
+        categories = new ArrayList<>();
         categories.add("-- Select --");
         categories.add("Student");
         categories.add("Teacher");
@@ -54,19 +54,14 @@ context = TestActivity.this;
         dialog.setCancelable(true);*/
 
 
-
-
-
-
-      
     }
 
 
     public void open(final Context context) {
         builder = new AlertDialog.Builder(context);
         builder.setTitle("select std");
-        LayoutInflater inflater =(LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        View view1 =  inflater.inflate(R.layout.dailog_spinner, null);
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View view1 = inflater.inflate(R.layout.dailog_spinner, null);
         builder.setView(view1);
         builder.setTitle("Select Std");
         final Spinner spinner = view1.findViewById(R.id.spinner1);
@@ -101,13 +96,9 @@ context = TestActivity.this;
         //   dialog.show();
 
 
-
-
-
-
-              builder = new AlertDialog.Builder(context);
+        builder = new AlertDialog.Builder(context);
         builder.setTitle("select std");
-        LayoutInflater inflater =(LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         View view1 = inflater.inflate(R.layout.dailog_spinner, null);
         builder.setView(view1);
         builder.setTitle("Select Std");
@@ -134,8 +125,6 @@ context = TestActivity.this;
         builder.show();
 
     }
-
-
 
 
     @Override

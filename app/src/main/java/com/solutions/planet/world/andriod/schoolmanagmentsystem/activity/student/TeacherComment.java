@@ -15,5 +15,7 @@ public class TeacherComment extends AppCompatActivity {
         Toolbar toolbar =  findViewById(R.id.toolbar); // get the reference of Toolbar
         setSupportActionBar(toolbar);
         // Setting/replace toolbar as the ActionBar
+
+        // send_msg.xml  commne dialogbox ui
     }
 }

@@ -67,10 +67,6 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
             } else if (item.contains("Bus")) {
                 startActivity(new Intent(context, BusActivity.class));
             }
-
         }
-
     }
-
-
 }

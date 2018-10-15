@@ -47,7 +47,6 @@ public class TeacherActivity extends AppCompatActivity implements NavigationView
                     new TeacherHomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_dashboard);
         }
-
     }
 
 
@@ -92,8 +91,6 @@ public class TeacherActivity extends AppCompatActivity implements NavigationView
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CostManagmentFragment()).commit();
                 break;
-
-
         }
 
         drawer.closeDrawer(GravityCompat.START);

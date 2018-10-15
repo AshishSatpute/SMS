@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+   <!-- <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#D81B60</color>-->
     <color name="colorGray300">#E0E0E0</color>
     <color name="colorGray50">#FAFAFA</color>
     <color name="colorGray100">#F5F5F5</color>
     <color name="colorPink50">#FCE4EC</color>
     <color name="colorLightBlue100">#B3E5FC</color>
     <color name="colorPink200">#F48FB1</color>
+
+
+
+
+    <color name="colorPrimary">#673AB7</color>
+    <color name="colorPrimaryDark">#512DA8</color>
+    <color name="primary_light">#D1C4E9</color>
+    <color name="colorAccent">#FF9800</color>  <!--button-->
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+
+
+
+
+
+
+
 </resources>

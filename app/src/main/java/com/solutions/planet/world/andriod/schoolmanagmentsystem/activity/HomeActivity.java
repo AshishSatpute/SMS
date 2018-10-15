@@ -31,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
 
         /*if (!ActivityName.isEmpty()) {
             Log.i(TAG, "onCreate: not emply" + ActivityName);
-            if (ActivityName.contains("AdminActivity")) {
+            if (ActivityName.contains("AdminActivity")) {  
                 loadFragment(AdminActivity.getInstance());
             } else if (ActivityName.contains("Teacher")) {
                 Log.i(TAG, "onCreate: Teacher select");

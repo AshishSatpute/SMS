@@ -2,24 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.solutions.planet.world.andriod.schoolmanagmentsystem">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.LoginActivity"
             android:screenOrientation="portrait">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
         <activity
             android:name=".activity.HomeActivity"
@@ -74,15 +73,13 @@
         <activity android:name=".activity.teacher.SendMsg" />
         <activity android:name=".fragment.bus.BusFragment" />
         <activity android:name=".activity.bus.BusActivity" />
-        <activity android:name=".activity.TestActivity">
-
-
-        </activity>
+        <activity android:name=".activity.TestActivity"></activity>
         <activity
             android:name=".activity.teacher.AttendanceListCollector"
             android:label="Student List"
             android:parentActivityName=".activity.teacher.StudentsAttendance"
             android:theme="@style/AppTheme.MyTheme" />
+        <activity android:name=".activity.student.StudentProfile"></activity>
     </application>
 
 </manifest>

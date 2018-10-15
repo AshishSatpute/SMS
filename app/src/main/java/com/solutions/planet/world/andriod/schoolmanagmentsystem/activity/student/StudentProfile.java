@@ -5,13 +5,11 @@ import android.os.Bundle;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 
-public class Homework extends AppCompatActivity {
+public class StudentProfile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homework);
-
-
+        setContentView(R.layout.activity_student_profile);
     }
 }
