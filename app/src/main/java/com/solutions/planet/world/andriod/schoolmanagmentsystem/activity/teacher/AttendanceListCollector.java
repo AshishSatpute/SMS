@@ -1,5 +1,6 @@
 package com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.teacher;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -13,11 +14,14 @@ public class AttendanceListCollector extends AppCompatActivity {
 
 
     public static final String TAG = AttendanceListCollector.class.getCanonicalName();
+    Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance_list_collector);
       //  getActionBar().setTitle("Student List");
+        context = AttendanceListCollector.this;
+        Log.i(TAG, "onCreate: ");
         getSupportActionBar().setTitle("Student List");
 
         Log.i(TAG, "onCreate: ");

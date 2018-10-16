@@ -1,5 +1,6 @@
 package com.solutions.planet.world.andriod.schoolmanagmentsystem.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,7 +16,7 @@ public class HomeActivity extends AppCompatActivity {
 
     public static final String TAG = HomeActivity.class.getCanonicalName();
     TextView textView;
-
+    Context context;
     String ActivityName;
 
     @Override

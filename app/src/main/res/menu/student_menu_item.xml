@@ -15,7 +15,7 @@
             android:id="@+id/nav_student_attendace"
             android:title="@string/attendance" />
 
-        <item
+      <!--  <item
             android:id="@+id/nav_student_homework"
             android:title="@string/homework" />
 
@@ -28,6 +28,6 @@
         <item
             android:id="@+id/nav_student_bus_pick_up"
             android:title="@string/bus_pick_up"/>
-
+-->
     </group>
 </menu>

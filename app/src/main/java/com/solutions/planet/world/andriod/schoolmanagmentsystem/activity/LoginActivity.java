@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -24,14 +25,18 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     public static final String TAG = LoginActivity.class.getCanonicalName();
     Context context;
     String item;
+    EditText etUserName, etPassword;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i(TAG, "onCreate: ");
         context = LoginActivity.this;
+        Log.i(TAG, "onCreate: ");
         Spinner spinner = findViewById(R.id.spinner);
+        etUserName = findViewById(R.id.etUserName);
+        etPassword = findViewById(R.id.etPassword);
 
         spinner.setOnItemSelectedListener(this);
 
@@ -43,7 +48,6 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, categories);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(dataAdapter);
-
     }
 
     @Override
@@ -56,17 +60,64 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     }
 
     public void btnLogin(View view) {
-        Log.i(TAG, "btnLogin: chick");
         if (!item.isEmpty()) {
             if (item.contains("Parent"))
-                startActivity(new Intent(context, StudentActivity.class));
+                validationParent();
             else if (item.contains("Teacher"))
-                startActivity(new Intent(context, TeacherActivity.class));
-            else if (item.contains("--Select--")) {
-                Toast.makeText(context, "invalid user type", Toast.LENGTH_SHORT).show();
-            } else if (item.contains("Bus")) {
-                startActivity(new Intent(context, BusActivity.class));
-            }
+                validationTeacher();
+            else if (item.contains("-- Select --"))
+                validation();
+            else if (item.contains("Bus"))
+                validationBus();
         }
+    }
+
+    private void validation() {
+        if (item.contains("-- Select --"))
+            Toast.makeText(context, "Please select user type", Toast.LENGTH_SHORT).show();
+        clearText();
+    }
+
+    private void validationBus() {
+        if (item.contains("Bus") && !getEtUserName().isEmpty() && !getEtPassword().isEmpty()) {
+            startActivity(new Intent(context, BusActivity.class));
+            clearText();
+        } else {
+            clearText();
+            Toast.makeText(context, "Invalid UserId And Password", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void validationTeacher() {
+        if (item.contains("Teacher") && !getEtUserName().isEmpty() && !getEtPassword().isEmpty()) {
+            startActivity(new Intent(context, TeacherActivity.class));
+            clearText();
+        } else {
+            Toast.makeText(context, "Invalid UserId And Password", Toast.LENGTH_SHORT).show();
+            clearText();
+        }
+    }
+
+    private void validationParent() {
+        if (item.contains("Parent") && !getEtUserName().isEmpty() && !getEtPassword().isEmpty()) {
+            startActivity(new Intent(context, StudentActivity.class));
+            clearText();
+        } else {
+            Toast.makeText(context, "Invalid UserId And Password", Toast.LENGTH_SHORT).show();
+            clearText();
+        }
+    }
+
+    public String getEtUserName() {
+        return etUserName.getText().toString().trim();
+    }
+
+    public String getEtPassword() {
+        return etPassword.getText().toString().trim();
+    }
+
+    public void clearText() {
+        etUserName.setText("");
+        etPassword.setText("");
     }
 }

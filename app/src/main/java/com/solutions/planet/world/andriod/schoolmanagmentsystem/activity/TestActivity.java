@@ -123,7 +123,6 @@ public class TestActivity extends AppCompatActivity implements AdapterView.OnIte
         });
         builder.create();
         builder.show();
-
     }
 
 

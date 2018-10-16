@@ -21,7 +21,7 @@ import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.admin.S
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.bus.BusHomeFragment;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.teacher.TeacherManagerFargment;
 
-public class BusActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class BusActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
     Context context;
     public static final String TAG = BusActivity.class.getCanonicalName();
@@ -46,7 +46,6 @@ public class BusActivity extends AppCompatActivity implements NavigationView.OnN
                     new BusHomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_dashboard);
         }
-
     }
 
 
@@ -80,7 +79,7 @@ public class BusActivity extends AppCompatActivity implements NavigationView.OnN
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new TeacherManagerFargment()).commit();
                 break;
-            case R.id.nav_bus_management:
+           /* case R.id.nav_bus_management:
                 Log.i(TAG, "onNavigationItemSelected: chick teacher manager");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new BusManagementFragment()).commit();
@@ -91,7 +90,7 @@ public class BusActivity extends AppCompatActivity implements NavigationView.OnN
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CostManagmentFragment()).commit();
                 break;
-
+*/
 
         }
 

@@ -1,4 +1,4 @@
-package com.solutions.planet.world.andriod.schoolmanagmentsystem.adapter;
+package com.solutions.planet.world.andriod.schoolmanagmentsystem.adapter.studentAdapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -16,7 +16,7 @@ import com.solutions.planet.world.andriod.schoolmanagmentsystem.model.DemoList;
 import java.util.List;
 
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> {
-
+    public static final String TAG=EventAdapter.class.getCanonicalName();
     private Context context;
     private List<DemoList> demoLists;
 

@@ -10,9 +10,7 @@ import android.view.ViewGroup;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class AdminDashboardFragment extends Fragment {
 
 

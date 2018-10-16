@@ -78,7 +78,7 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
                     new StudentManagmentFragment()).commit();
                 /*startActivity(new Intent(this,AddStudent.class));*/
                 break;
-            case R.id.nav_teacher_management:
+          /*  case R.id.nav_teacher_management:
                 Log.i(TAG, "onNavigationItemSelected: chick teacher manager");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new TeacherManagerFargment()).commit();
@@ -93,7 +93,7 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
                 Log.i(TAG, "onNavigationItemSelected: chick teacher manager");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CostManagmentFragment()).commit();
-                break;
+                break;*/
 
 
         }

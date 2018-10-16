@@ -1,9 +1,11 @@
 package com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.teacher;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +19,10 @@ import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.teacher
 
 public class TeacherHomeFragment extends Fragment implements View.OnClickListener {
 
+public static final String TAG = TeacherHomeFragment.class.getCanonicalName();
+Context context;
 
     public TeacherHomeFragment() {
-        // Required empty public constructor
     }
 
     CardView cvMyclass, cvAttendance, cvHomework, cvMsg;
@@ -28,8 +31,8 @@ public class TeacherHomeFragment extends Fragment implements View.OnClickListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_teacher_home, container, false);
+        Log.i(TAG, "onCreateView: ");
         cvMyclass = view.findViewById(R.id.cvMyClass);
         cvAttendance = view.findViewById(R.id.cvAttendance);
         cvHomework = view.findViewById(R.id.cvHomework);

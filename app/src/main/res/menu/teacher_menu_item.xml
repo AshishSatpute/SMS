@@ -11,7 +11,7 @@
             android:id="@+id/nav_student_management"
 
             android:title="@string/dashboard" />
-        <item
+      <!--  <item
             android:id="@+id/nav_teacher_management"
 
             android:title="@string/teacher_management" />
@@ -27,7 +27,7 @@
             android:id="@+id/nav_cost_management"
 
             android:title="@string/cost_management" />
-
+-->
     </group>
 
 

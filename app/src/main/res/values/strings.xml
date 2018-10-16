@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">School Chale hum</string>
     <string name="user_name">User Name :</string>
-    <string name="password">Password :</string>
+    <string name="password">Password </string>
     <string name="user_type">User Type :</string>
     <string name="login">Login</string>
     <string name="open">Open</string>
@@ -88,6 +88,11 @@
     <string name="driver_name">Driver Name :-</string>
     <string name="event_name">Navratri</string>
     <string name="teacher">Teacher</string>
+    <string name="student">Student</string>
+    <string name="droped">Droped</string>
+    <string name="picked">Picked</string>
+    <string name="log_out">Log Out</string>
+    <string name="student_attendance">Student Attendance</string>
 
     <string-array name="std_lists">
         <item>1 std section A</item>

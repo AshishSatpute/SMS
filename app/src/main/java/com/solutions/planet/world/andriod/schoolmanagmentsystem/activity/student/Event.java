@@ -17,7 +17,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.MySingleTone;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.adapter.EventAdapter;
+import com.solutions.planet.world.andriod.schoolmanagmentsystem.adapter.studentAdapter.EventAdapter;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.model.DemoList;
 
 import org.json.JSONArray;
@@ -51,7 +51,6 @@ public class Event extends AppCompatActivity {
 
         demoLists = new ArrayList<>();
         getData();
-
     }
 
     private void getData() {

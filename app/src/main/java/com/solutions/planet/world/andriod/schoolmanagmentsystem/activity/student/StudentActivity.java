@@ -1,5 +1,6 @@
 package com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -22,10 +23,12 @@ import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.student
 public class StudentActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawer;
     public static final String TAG = StudentActivity.class.getCanonicalName();
+    Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
+        context=StudentActivity.this;
         Log.i(TAG, "onCreate: ");
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -75,7 +78,7 @@ public class StudentActivity extends AppCompatActivity implements NavigationView
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_student,
                         new StudentAttendanceFragment()).commit();
                 break;
-            case R.id.nav_student_event:
+           /* case R.id.nav_student_event:
                 Log.i(TAG, "onNavigationItemSelected: chick nav_student_event");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_student,
                         new StudentEventFragment()).commit();
@@ -90,7 +93,7 @@ public class StudentActivity extends AppCompatActivity implements NavigationView
                 Log.i(TAG, "onNavigationItemSelected: chick nav_student_event");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_student,
                         new StudentHomeworkFragment()).commit();
-                break;
+                break;*/
         }
 
         drawer.closeDrawer(GravityCompat.START);

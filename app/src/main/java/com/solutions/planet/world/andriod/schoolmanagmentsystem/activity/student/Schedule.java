@@ -1,5 +1,6 @@
 package com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student;
 
+import android.content.Context;
 import android.graphics.Matrix;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
@@ -37,11 +38,13 @@ public class Schedule extends AppCompatActivity implements View.OnTouchListener 
     PointF mid = new PointF();
     float oldDist = 1f;
 
-
+    Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
+        context=Schedule.this;
+        Log.i(TAG, "onCreate: ");
         ImageView view = findViewById(R.id.ivSchedule);
         view.setOnTouchListener(this);
     }
