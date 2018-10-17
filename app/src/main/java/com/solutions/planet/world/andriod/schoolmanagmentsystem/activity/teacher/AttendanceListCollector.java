@@ -19,17 +19,14 @@ public class AttendanceListCollector extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance_list_collector);
-      //  getActionBar().setTitle("Student List");
         context = AttendanceListCollector.this;
         Log.i(TAG, "onCreate: ");
-        getSupportActionBar().setTitle("Student List");
+        getSupportActionBar().setTitle(R.string.student_list);
 
         Log.i(TAG, "onCreate: ");
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.frame,
                     new AttendnaceList()).commit();
-
         }
-
     }
 }

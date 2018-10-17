@@ -4,21 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.student.BusPickUp">
+    tools:context=".activity.SpashScreen">
 
-  <include android:id="@+id/toolbar"
-      layout="@layout/top_toolbar"
-      />
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/student_bus_pick_up_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+    <pl.droidsonroids.gif.GifImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/animation"
+        />
+
 
 </android.support.constraint.ConstraintLayout>

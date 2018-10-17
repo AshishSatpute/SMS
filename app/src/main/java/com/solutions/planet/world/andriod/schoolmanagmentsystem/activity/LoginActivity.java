@@ -2,6 +2,8 @@ package com.solutions.planet.world.andriod.schoolmanagmentsystem.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,13 +14,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.bus.BusActivity;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student.StudentActivity;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.teacher.TeacherActivity;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import static com.solutions.planet.world.andriod.schoolmanagmentsystem.R.*;
 
 
 public class LoginActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -31,22 +32,18 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(layout.activity_main);
         context = LoginActivity.this;
         Log.i(TAG, "onCreate: ");
-        Spinner spinner = findViewById(R.id.spinner);
-        etUserName = findViewById(R.id.etUserName);
-        etPassword = findViewById(R.id.etPassword);
+        Spinner spinner = findViewById(id.spinner);
+        etUserName = findViewById(id.etUserName);
+        etPassword = findViewById(id.etPassword);
 
         spinner.setOnItemSelectedListener(this);
 
-        List<String> categories = new ArrayList<>();
-        categories.add("-- Select --");
-        categories.add("Parent");
-        categories.add("Teacher");
-        categories.add("Bus");
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, categories);
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(context,
+                android.R.layout.simple_spinner_item, getResources().getStringArray(array.catagery));
+        dataAdapter.setDropDownViewResource(layout.support_simple_spinner_dropdown_item);
         spinner.setAdapter(dataAdapter);
     }
 
@@ -59,6 +56,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     public void onNothingSelected(AdapterView<?> arg0) {
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void btnLogin(View view) {
         if (!item.isEmpty()) {
             if (item.contains("Parent"))
@@ -78,34 +76,45 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         clearText();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void validationBus() {
-        if (item.contains("Bus") && !getEtUserName().isEmpty() && !getEtPassword().isEmpty()) {
-            startActivity(new Intent(context, BusActivity.class));
-            clearText();
-        } else {
-            clearText();
-            Toast.makeText(context, "Invalid UserId And Password", Toast.LENGTH_SHORT).show();
+        if (item.contains("Bus")) {
+            if (getEtUserName().isEmpty()) {
+                etUserName.setError("invalid userId");
+                return;
+            }
+            if (getEtPassword().isEmpty()) {
+                etPassword.setError("invalid password");
+                clearText();
+            } else startActivity(new Intent(context, BusActivity.class));
         }
     }
 
     private void validationTeacher() {
-        if (item.contains("Teacher") && !getEtUserName().isEmpty() && !getEtPassword().isEmpty()) {
-            startActivity(new Intent(context, TeacherActivity.class));
-            clearText();
-        } else {
-            Toast.makeText(context, "Invalid UserId And Password", Toast.LENGTH_SHORT).show();
-            clearText();
+        if (item.contains("Teacher")) {
+            if (getEtUserName().isEmpty()) {
+                etUserName.setError("invalid userId");
+                return;
+            }
+            if (getEtPassword().isEmpty()) {
+                etPassword.setError("invalid password");
+                clearText();
+            } else startActivity(new Intent(context, TeacherActivity.class));
         }
     }
 
     private void validationParent() {
-        if (item.contains("Parent") && !getEtUserName().isEmpty() && !getEtPassword().isEmpty()) {
-            startActivity(new Intent(context, StudentActivity.class));
-            clearText();
-        } else {
-            Toast.makeText(context, "Invalid UserId And Password", Toast.LENGTH_SHORT).show();
-            clearText();
+        if (item.contains("Parent")) {
+            if (getEtUserName().isEmpty()) {
+                etUserName.setError("invalid userId");
+                return;
+            }
+            if (getEtPassword().isEmpty()) {
+                etPassword.setError("invalid password");
+                clearText();
+            } else startActivity(new Intent(context, StudentActivity.class));
         }
+
     }
 
     public String getEtUserName() {

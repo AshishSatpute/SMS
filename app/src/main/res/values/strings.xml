@@ -93,6 +93,8 @@
     <string name="picked">Picked</string>
     <string name="log_out">Log Out</string>
     <string name="student_attendance">Student Attendance</string>
+    <string name="home">Home</string>
+    <string name="user_id">User Id</string>
 
     <string-array name="std_lists">
         <item>1 std section A</item>
@@ -101,5 +103,14 @@
         <item>2 std section A</item>
         <item>2 std section B</item>
     </string-array>
+
+
+    <string-array name="catagery">
+        <item>-- Select --</item>
+        <item>Parent</item>
+        <item>Teacher</item>
+        <item>Bus</item>
+    </string-array>
+
 
 </resources>

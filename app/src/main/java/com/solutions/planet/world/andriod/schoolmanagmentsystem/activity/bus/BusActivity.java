@@ -91,7 +91,6 @@ public class BusActivity extends AppCompatActivity implements NavigationView.OnN
                         new CostManagmentFragment()).commit();
                 break;
 */
-
         }
 
         drawer.closeDrawer(GravityCompat.START);

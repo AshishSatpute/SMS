@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
@@ -49,10 +50,19 @@ public class MyClass extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_demo);
-        Log.i(TAG, "onCreate: ");
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Toolbar toolbar =  findViewById(R.id.toolbar); // get the reference of Toolbar
         context = MyClass.this;
+        setSupportActionBar(toolbar);
+        TextView mTitle = toolbar.findViewById(R.id.toolbar_title);
+        mTitle.setText(R.string.myclass);
+        ImageView mImageView = toolbar.findViewById(R.id.tvBack);
+        mImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        Log.i(TAG, "onCreate: ");
         mLayout =  findViewById(R.id.linearLayout);
 
         FloatingActionButton fab = findViewById(R.id.fab);

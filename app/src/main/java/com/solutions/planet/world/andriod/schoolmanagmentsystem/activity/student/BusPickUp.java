@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 
@@ -18,7 +21,15 @@ Context context;
         setContentView(R.layout.activity_bus_pick_up);
         Toolbar toolbar =  findViewById(R.id.toolbar); // get the reference of Toolbar
         setSupportActionBar(toolbar);
-        // Setting/replace toolbar as the ActionBar
+        TextView mTitle = toolbar.findViewById(R.id.toolbar_title);
+        mTitle.setText(R.string.bus_pick_up);
+        ImageView mImageView = toolbar.findViewById(R.id.tvBack);
+        mImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         context=BusPickUp.this;
         Log.i(TAG, "onCreate: ");
     }

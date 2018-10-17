@@ -6,12 +6,14 @@ import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 
@@ -44,6 +46,11 @@ public class Schedule extends AppCompatActivity implements View.OnTouchListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
         context=Schedule.this;
+        Toolbar toolbar =  findViewById(R.id.toolbar); // get the reference of Toolbar
+        setSupportActionBar(toolbar);
+        TextView mTitle = toolbar.findViewById(R.id.toolbar_title);
+        mTitle.setText(R.string.schedule);
+
         Log.i(TAG, "onCreate: ");
         ImageView view = findViewById(R.id.ivSchedule);
         view.setOnTouchListener(this);
