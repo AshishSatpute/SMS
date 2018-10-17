@@ -1,4 +1,4 @@
-package com.solutions.planet.world.andriod.schoolmanagmentsystem;
+package com.solutions.planet.world.andriod.schoolmanagmentsystem.otherClasses;
 
 import android.content.Context;
 
