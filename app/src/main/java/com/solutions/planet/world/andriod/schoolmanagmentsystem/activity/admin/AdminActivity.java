@@ -52,7 +52,6 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
 
     }
 
-
     @Override
     public void onBackPressed() {
         Log.i(TAG, "onBackPressed: ");

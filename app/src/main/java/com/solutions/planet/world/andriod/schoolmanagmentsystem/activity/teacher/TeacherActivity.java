@@ -1,6 +1,7 @@
 package com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.teacher;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -13,6 +14,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
+import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.ContactUs;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.admin.AdminDashboardFragment;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.admin.BusManagementFragment;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.admin.CostManagmentFragment;
@@ -74,6 +76,13 @@ public class TeacherActivity extends AppCompatActivity implements NavigationView
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new StudentManagmentFragment()).commit();
                 /*startActivity(new Intent(this,AddStudent.class));*/
+                break;
+
+            case R.id.nav_log_out:
+                finish();
+                break;
+            case R.id.nav_contact_us:
+                startActivity(new Intent(context,ContactUs.class));
                 break;
           /*  case R.id.nav_teacher_management:
                 Log.i(TAG, "onNavigationItemSelected: chick teacher manager");

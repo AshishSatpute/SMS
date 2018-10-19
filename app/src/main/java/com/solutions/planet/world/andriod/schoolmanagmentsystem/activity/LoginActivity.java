@@ -14,13 +14,13 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.bus.BusActivity;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student.StudentActivity;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.teacher.TeacherActivity;
 
 
 import static com.solutions.planet.world.andriod.schoolmanagmentsystem.R.*;
-
 
 public class LoginActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     public static final String TAG = LoginActivity.class.getCanonicalName();
@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity_main);
+        setContentView(R.layout.activity_main);
         context = LoginActivity.this;
         Log.i(TAG, "onCreate: ");
         Spinner spinner = findViewById(id.spinner);
@@ -86,7 +86,11 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
             if (getEtPassword().isEmpty()) {
                 etPassword.setError("invalid password");
                 clearText();
-            } else startActivity(new Intent(context, BusActivity.class));
+            } else {
+                clearText();
+                startActivity(new Intent(context, BusActivity.class));
+            }
+
         }
     }
 
@@ -99,7 +103,10 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
             if (getEtPassword().isEmpty()) {
                 etPassword.setError("invalid password");
                 clearText();
-            } else startActivity(new Intent(context, TeacherActivity.class));
+            } else {
+                clearText();
+                startActivity(new Intent(context, TeacherActivity.class));
+            }
         }
     }
 
@@ -112,9 +119,11 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
             if (getEtPassword().isEmpty()) {
                 etPassword.setError("invalid password");
                 clearText();
-            } else startActivity(new Intent(context, StudentActivity.class));
+            } else {
+                clearText();
+                startActivity(new Intent(context, StudentActivity.class));
+            }
         }
-
     }
 
     public String getEtUserName() {

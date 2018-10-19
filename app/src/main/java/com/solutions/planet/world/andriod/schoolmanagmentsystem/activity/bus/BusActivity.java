@@ -1,6 +1,7 @@
 package com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.bus;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,6 +14,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
+import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.ContactUs;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.admin.AdminActivity;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.admin.AdminDashboardFragment;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.admin.BusManagementFragment;
@@ -30,6 +32,7 @@ public class BusActivity extends AppCompatActivity implements NavigationView.OnN
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bus);
+        context=BusActivity.this;
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawer = findViewById(R.id.adminDrawerlayout);
@@ -74,23 +77,18 @@ public class BusActivity extends AppCompatActivity implements NavigationView.OnN
                         new StudentManagmentFragment()).commit();
                 /*startActivity(new Intent(this,AddStudent.class));*/
                 break;
-            case R.id.nav_teacher_management:
-                Log.i(TAG, "onNavigationItemSelected: chick teacher manager");
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new TeacherManagerFargment()).commit();
+            case R.id.nav_log_out:
+                finish();
                 break;
-           /* case R.id.nav_bus_management:
-                Log.i(TAG, "onNavigationItemSelected: chick teacher manager");
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new BusManagementFragment()).commit();
+            case R.id.nav_contact_us:
+                startActivity(new Intent(context,ContactUs.class));
                 break;
 
-            case R.id.nav_cost_management:
+            /*case R.id.nav_cost_management:
                 Log.i(TAG, "onNavigationItemSelected: chick teacher manager");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CostManagmentFragment()).commit();
-                break;
-*/
+                break;*/
         }
 
         drawer.closeDrawer(GravityCompat.START);

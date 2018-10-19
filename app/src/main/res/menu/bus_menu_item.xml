@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:id="@+id/main">
         <item
             android:id="@+id/nav_dashboard"
             android:title="@string/profile" />
         <item
             android:id="@+id/nav_student_management"
             android:title="@string/home" />
-        <item
-            android:id="@+id/nav_teacher_management"
-            android:title="@string/log_out" />
 
 
         <!--        <item
@@ -25,6 +23,18 @@
                     android:title="@string/cost_management" />
         -->
     </group>
+
+<group android:id="@+id/extra"
+    android:checkableBehavior="single">
+
+    <item android:id="@+id/nav_contact_us"
+        android:title="@string/contact_us"/>
+
+    <item
+        android:id="@+id/nav_log_out"
+        android:title="@string/log_out" />
+
+</group>
 
 
 </menu>

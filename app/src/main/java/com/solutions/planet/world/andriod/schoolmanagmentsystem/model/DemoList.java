@@ -35,5 +35,4 @@ public class DemoList {
         this.imageurl = imageurl;
     }
 
-
 }

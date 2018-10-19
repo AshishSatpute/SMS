@@ -1,6 +1,7 @@
 package com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,22 +14,21 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
+import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.ContactUs;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.student.StudentAttendanceFragment;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.student.StudentBusPickUpFragment;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.student.StudentDashboardFragment;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.student.StudentEventFragment;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.student.StudentHomeworkFragment;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.student.StudentProfileFragment;
 
-public class StudentActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class StudentActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
     public static final String TAG = StudentActivity.class.getCanonicalName();
     Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
-        context=StudentActivity.this;
+        context = StudentActivity.this;
         Log.i(TAG, "onCreate: ");
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -78,22 +78,13 @@ public class StudentActivity extends AppCompatActivity implements NavigationView
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_student,
                         new StudentAttendanceFragment()).commit();
                 break;
-           /* case R.id.nav_student_event:
-                Log.i(TAG, "onNavigationItemSelected: chick nav_student_event");
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_student,
-                        new StudentEventFragment()).commit();
-                break;
 
-            case R.id.nav_student_bus_pick_up:
-                Log.i(TAG, "onNavigationItemSelected: chick nav_student_event");
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_student,
-                        new StudentBusPickUpFragment()).commit();
+            case R.id.nav_log_out:
+                finish();
                 break;
-            case R.id.nav_student_homework:
-                Log.i(TAG, "onNavigationItemSelected: chick nav_student_event");
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_student,
-                        new StudentHomeworkFragment()).commit();
-                break;*/
+            case R.id.nav_contact_us:
+                startActivity(new Intent(context, ContactUs.class));
+                break;
         }
 
         drawer.closeDrawer(GravityCompat.START);

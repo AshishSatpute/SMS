@@ -11,6 +11,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class SpashScreen extends AppCompatActivity {
     GifImageView gifImageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +22,6 @@ public class SpashScreen extends AppCompatActivity {
             Thread timerThread = new Thread() {
                 public void run() {
                     try {
-
                         sleep(3000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -44,10 +44,7 @@ public class SpashScreen extends AppCompatActivity {
             timerThread.start();
 
         } else {
-           startActivity(new Intent(SpashScreen.this,LoginActivity.class));
+            startActivity(new Intent(SpashScreen.this, LoginActivity.class));
         }
-
     }
-
 }
-

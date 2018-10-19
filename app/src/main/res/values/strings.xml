@@ -95,6 +95,11 @@
     <string name="student_attendance">Student Attendance</string>
     <string name="home">Home</string>
     <string name="user_id">User Id</string>
+    <string name="about_us">About Us</string>
+    <string name="school_name">School Name</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="address1">B/W No. B 28, Gate No.3, Abhimanshree Society, Behind Volkaswagan Showroom,, University Pashan Road, Pashan, Pune, Maharashtra 411008</string>
+    <string name="contactno">9167665654</string>
 
     <string-array name="std_lists">
         <item>1 std section A</item>
