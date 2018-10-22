@@ -1,5 +1,6 @@
 package com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.bus;
 
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -9,19 +10,18 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.ContactUs;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.admin.AdminActivity;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.admin.AdminDashboardFragment;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.admin.BusManagementFragment;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.admin.CostManagmentFragment;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.admin.StudentManagmentFragment;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.bus.BusHomeFragment;
-import com.solutions.planet.world.andriod.schoolmanagmentsystem.fragment.teacher.TeacherManagerFargment;
 
 public class BusActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
@@ -32,7 +32,7 @@ public class BusActivity extends AppCompatActivity implements NavigationView.OnN
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bus);
-        context=BusActivity.this;
+        context = BusActivity.this;
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawer = findViewById(R.id.adminDrawerlayout);
@@ -81,17 +81,28 @@ public class BusActivity extends AppCompatActivity implements NavigationView.OnN
                 finish();
                 break;
             case R.id.nav_contact_us:
-                startActivity(new Intent(context,ContactUs.class));
+                startActivity(new Intent(context, ContactUs.class));
                 break;
-
-            /*case R.id.nav_cost_management:
-                Log.i(TAG, "onNavigationItemSelected: chick teacher manager");
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new CostManagmentFragment()).commit();
-                break;*/
         }
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.search_bus_items, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchManager searchManager = (SearchManager) BusActivity.this.getSystemService(Context.SEARCH_SERVICE);
+
+        SearchView searchView = null;
+        if (searchItem != null) {
+            searchView = (SearchView) searchItem.getActionView();
+        }
+        if (searchView != null) {
+            searchView.setSearchableInfo(searchManager.getSearchableInfo(BusActivity.this.getComponentName()));
+        }
+        return super.onCreateOptionsMenu(menu);
     }
 }

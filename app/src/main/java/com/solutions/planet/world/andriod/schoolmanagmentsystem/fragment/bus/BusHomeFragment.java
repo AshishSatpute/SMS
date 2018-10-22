@@ -14,17 +14,17 @@ import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 
 public class BusHomeFragment extends Fragment {
 
-public static final String TAG = BusHomeFragment.class.getCanonicalName();
-Context context;
+    public static final String TAG = BusHomeFragment.class.getCanonicalName();
+    Context context;
+
     public BusHomeFragment() {
-        // Required empty public constructor
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_bus_home, container, false);
         Log.i(TAG, "onCreateView: ");
 

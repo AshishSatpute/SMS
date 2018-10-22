@@ -12,23 +12,7 @@
             android:id="@+id/nav_student_management"
 
             android:title="@string/home" />
-      <!--  <item
-            android:id="@+id/nav_teacher_management"
 
-            android:title="@string/teacher_management" />
-
-
-        <item
-            android:id="@+id/nav_bus_management"
-
-            android:title="@string/bus_management" />
-
-
-        <item
-            android:id="@+id/nav_cost_management"
-
-            android:title="@string/cost_management" />
--->
     </group>
 
 

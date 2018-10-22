@@ -70,7 +70,18 @@
         <activity android:name=".activity.teacher.AddHomework" />
         <activity android:name=".activity.teacher.SendMsg" />
         <activity android:name=".fragment.bus.BusFragment" />
-        <activity android:name=".activity.bus.BusActivity" />
+        <activity android:name=".activity.bus.BusActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
         <activity android:name=".activity.TestActivity" />
         <activity
             android:name=".activity.teacher.AttendanceListCollector"
