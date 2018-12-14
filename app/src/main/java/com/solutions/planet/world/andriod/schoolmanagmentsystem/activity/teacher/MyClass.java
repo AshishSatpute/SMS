@@ -50,7 +50,7 @@ public class MyClass extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_demo);
-        Toolbar toolbar =  findViewById(R.id.toolbar); // get the reference of Toolbar
+        Toolbar toolbar =  findViewById(R.id.toolbar);
         context = MyClass.this;
         setSupportActionBar(toolbar);
         TextView mTitle = toolbar.findViewById(R.id.toolbar_title);

@@ -17,14 +17,15 @@ import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 
 public class ContactUs extends AppCompatActivity {
 
-    public static final String TAG =ContactUs.class.getCanonicalName();
+    public static final String TAG = ContactUs.class.getCanonicalName();
     Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
-        context=ContactUs.this;
-        Toolbar toolbar =  findViewById(R.id.toolbar);
+        context = ContactUs.this;
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         TextView mTitle = toolbar.findViewById(R.id.toolbar_title);
         mTitle.setText(R.string.contact_us);
@@ -52,6 +53,5 @@ public class ContactUs extends AppCompatActivity {
             return;
         }
         startActivity(callIntent);
-
     }
 }

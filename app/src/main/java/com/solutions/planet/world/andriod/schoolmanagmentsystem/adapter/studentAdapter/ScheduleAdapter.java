@@ -11,8 +11,9 @@ import android.widget.ImageView;
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 
 public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHolder> {
-    public static final String TAG=ScheduleAdapter.class.getCanonicalName();
+    public static final String TAG = ScheduleAdapter.class.getCanonicalName();
     private Context context;
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -32,6 +33,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView ivSchedule;
+
         public ViewHolder(View itemView) {
             super(itemView);
             ivSchedule = itemView.findViewById(R.id.ivSchedule);

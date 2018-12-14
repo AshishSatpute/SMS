@@ -7,7 +7,9 @@ import android.os.Bundle;
 
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.R;
 
+
 import pl.droidsonroids.gif.GifImageView;
+
 
 public class SpashScreen extends AppCompatActivity {
     GifImageView gifImageView;
@@ -18,6 +20,7 @@ public class SpashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_spash_screen);
         gifImageView = findViewById(R.id.gif);
         gifImageView.setImageResource(R.drawable.animation);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Thread timerThread = new Thread() {
                 public void run() {

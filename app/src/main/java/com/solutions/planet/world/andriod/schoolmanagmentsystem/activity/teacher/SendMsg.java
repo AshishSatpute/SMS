@@ -20,7 +20,7 @@ public class SendMsg extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_msg);
         context = SendMsg.this;
-        Toolbar toolbar =  findViewById(R.id.toolbar); // get the reference of Toolbar
+        Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         TextView mTitle = toolbar.findViewById(R.id.toolbar_title);
         mTitle.setText(R.string.teacher_comment);

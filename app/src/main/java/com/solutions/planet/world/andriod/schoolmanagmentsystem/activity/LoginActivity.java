@@ -1,9 +1,13 @@
 package com.solutions.planet.world.andriod.schoolmanagmentsystem.activity;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +24,8 @@ import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.student
 import com.solutions.planet.world.andriod.schoolmanagmentsystem.activity.teacher.TeacherActivity;
 
 
+import java.util.ArrayList;
+
 import static com.solutions.planet.world.andriod.schoolmanagmentsystem.R.*;
 
 public class LoginActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -27,7 +33,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     Context context;
     String item;
     EditText etUserName, etPassword;
-
+    private static final int REQ_GROUP_PERMISSION = 425;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,6 +44,23 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         Spinner spinner = findViewById(id.spinner);
         etUserName = findViewById(id.etUserName);
         etPassword = findViewById(id.etPassword);
+
+
+        ArrayList<String> permissionsNeeded = new ArrayList<>();
+        ArrayList<String> permissionsAvailable = new ArrayList<>();
+        permissionsAvailable.add(Manifest.permission.READ_CONTACTS);
+        permissionsAvailable.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        permissionsAvailable.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+        permissionsAvailable.add(Manifest.permission.MEDIA_CONTENT_CONTROL);
+        permissionsAvailable.add(Manifest.permission.CALL_PHONE);
+        permissionsAvailable.add(Manifest.permission.INTERNET);
+
+        for (String permission : permissionsAvailable) {
+            if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED)
+                permissionsNeeded.add(permission);
+        }
+
+        requestGroupPermission(permissionsNeeded);
 
         spinner.setOnItemSelectedListener(this);
 
@@ -90,7 +113,6 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
                 clearText();
                 startActivity(new Intent(context, BusActivity.class));
             }
-
         }
     }
 
@@ -137,5 +159,11 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     public void clearText() {
         etUserName.setText("");
         etPassword.setText("");
+    }
+
+    private void requestGroupPermission(ArrayList<String> permissions) {
+        String[] permissionList = new String[permissions.size()];
+        permissions.toArray(permissionList);
+        ActivityCompat.requestPermissions(LoginActivity.this, permissionList, REQ_GROUP_PERMISSION);
     }
 }

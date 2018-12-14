@@ -21,6 +21,9 @@ public class EventGallery extends AppCompatActivity {
         setContentView(R.layout.activity_event_gallery);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Log.i(TAG, "onCreate: ");
+        context=EventGallery.this;
+
         TextView mTitle = toolbar.findViewById(R.id.toolbar_title);
         mTitle.setText(R.string.event_gallery);
         ImageView mImageView = toolbar.findViewById(R.id.tvBack);
@@ -30,7 +33,5 @@ public class EventGallery extends AppCompatActivity {
                 finish();
             }
         });
-        context=EventGallery.this;
-        Log.i(TAG, "onCreate: ");
     }
 }
