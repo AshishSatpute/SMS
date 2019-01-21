@@ -9,16 +9,16 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher_round" />
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/logo" />
 
     <TextView
         android:textColor="@android:color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:text="@string/dummy_name"
+        android:text="Jawahar Gurukul"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView

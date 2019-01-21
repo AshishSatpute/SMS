@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.solutions.planet.world.andriod.schoolmanagmentsystem">
+    package="com.solution.planet.world.andriod.jawahargurukulenglishschool">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -9,68 +9,69 @@
     <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
+        android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.otherClasses.AppController"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.LoginActivity"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.HomeActivity"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.HomeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.admin.AdminActivity"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.admin.AdminActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.student.StudentActivity"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.student.StudentActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.admin.AddStudent"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.admin.AddStudent"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.student.Demo"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.student.Demo"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.student.Attendance"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.student.Attendance"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.student.TeacherComment"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.student.TeacherComment"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.student.Schedule"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.student.Schedule"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".activity.student.Syllabus"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.student.Syllabus"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.student.Homework"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.student.Homework"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.student.Event"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.student.Event"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.student.BusPickUp"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.student.BusPickUp"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.student.EventGallery"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.student.EventGallery"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.teacher.TeacherActivity"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.teacher.TeacherActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.teacher.StudentsAttendance"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.teacher.StudentsAttendance"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.teacher.MyClass"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.teacher.MyClass"
             android:label="@string/title_activity_teacher_demo"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.teacher.AddHomework" />
-        <activity android:name=".activity.teacher.SendMsg" />
-        <activity android:name=".fragment.bus.BusFragment" />
-        <activity android:name=".activity.bus.BusActivity" >
+        <activity android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.teacher.AddHomework" />
+        <activity android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.teacher.SendMsg" />
+        <activity android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.fragment.bus.BusFragment" />
+        <activity android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.bus.BusActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
@@ -82,21 +83,21 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".activity.TestActivity" />
+        <activity android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.TestActivity" />
         <activity
-            android:name=".activity.teacher.AttendanceListCollector"
+            android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.teacher.AttendanceListCollector"
             android:label="Student List"
-            android:parentActivityName=".activity.teacher.StudentsAttendance"
+            android:parentActivityName="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.teacher.StudentsAttendance"
             android:theme="@style/AppTheme.MyTheme" />
-        <activity android:name=".activity.student.StudentProfile" />
-        <activity android:name=".activity.SpashScreen">
+        <activity android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.student.StudentProfile" />
+        <activity android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.SpashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ContactUs"/>
+        <activity android:name="com.solution.planet.world.andriod.jawahargurukulenglishschool.activity.ContactUs"/>
     </application>
 
 </manifest>

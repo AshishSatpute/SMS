@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="@string/october_03_2018_wednesday"
+                android:text="January 26 2019 - Saterday"
                 app:layout_constraintStart_toEndOf="@id/ivCal"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,6 +72,7 @@
                 android:layout_height="32dp" />
 
             <TextView
+                android:textColor="@android:color/black"
                 android:id="@+id/tvEventName"
                 android:layout_margin="16dp"
                 app:layout_constraintEnd_toEndOf="parent"

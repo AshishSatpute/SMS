@@ -44,7 +44,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/drop"
+                android:id="@+id/pick"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -52,20 +52,20 @@
                 android:text="@string/picked"
                 android:textAllCaps="false"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/pickup"
+                app:layout_constraintEnd_toStartOf="@+id/drop"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <Button
-                android:id="@+id/pickup"
+                android:id="@+id/drop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/button_ripple"
                 android:text="@string/droped"
                 android:textAllCaps="false"
-                app:layout_constraintBottom_toBottomOf="@+id/drop"
+                app:layout_constraintBottom_toBottomOf="@+id/pick"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/drop" />
+                app:layout_constraintTop_toTopOf="@+id/pick" />
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>

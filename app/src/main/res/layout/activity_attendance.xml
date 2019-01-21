@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".activity.student.Attendance">
 
-  <include
-      android:id="@+id/toolbar"
-      layout="@layout/top_toolbar"/>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/top_toolbar" />
 
     <ImageView
         android:id="@+id/ivProfilePic"
@@ -32,6 +32,27 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivProfilePic" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include">
+
+        <include
+            android:visibility="gone"
+            android:id="@+id/include1"
+            layout="@layout/student_status_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfilePic" />
+
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

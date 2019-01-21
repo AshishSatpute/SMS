@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">School Chale hum</string>
+    <string name="app_name">Jawahal Gurukul English School</string>
     <string name="user_name">User Name :</string>
     <string name="password">Password </string>
     <string name="user_type">User Type :</string>
@@ -25,7 +25,7 @@
     <string name="last_name">LAST NAME</string>
     <string name="gender">GENDER</string>
     <string name="date_of_birth">DATE OF BIRTH</string>
-    <string name="email">EMAIL</string>
+    <string name="email">jawahargurukul@gmail.com</string>
     <string name="mobile_no">MOBILE NO</string>
     <string name="religion">RELIGION</string>
     <string name="student_cast">STUDENT CAST</string>
@@ -64,7 +64,7 @@
     <string name="teacher_comment">Teacher Comment</string>
     <string name="schedule">Schedule</string>
     <string name="syllabus">Syllabus</string>
-    <string name="october_03_2018_wednesday">October 03 2018 -Wednesday</string>
+    <string name="october_03_2018_wednesday">January 18 2019 -Friday</string>
     <string name="event_gallery">Event Gallery</string>
     <string name="in_time">In Time</string>
     <string name="out_time">Out Time</string>
@@ -72,7 +72,7 @@
     <string name="myclass">MyClass</string>
     <string name="massage">Massage</string>
     <string name="my_bus">My Bus</string>
-    <string name="dummy_name">dummy name</string>
+    <string name="dummy_name">Sachin Tichkule</string>
     <string name="p">P</string>
     <string name="a">A</string>
     <string name="send">send</string>
@@ -86,7 +86,7 @@
     <string name="yes">Yes</string>
     <string name="standerd">2 std Secion A</string>
     <string name="driver_name">Driver Name :-</string>
-    <string name="event_name">Navratri</string>
+    <string name="event_name">Independence Day</string>
     <string name="teacher">Teacher</string>
     <string name="student">Student</string>
     <string name="droped">Droped</string>
@@ -96,10 +96,10 @@
     <string name="home">Home</string>
     <string name="user_id">User Id</string>
     <string name="about_us">About Us</string>
-    <string name="school_name">School Name</string>
+    <string name="school_name">Jawahar Gurukul English School</string>
     <string name="contact_us">Contact Us</string>
-    <string name="address1">B/W No. B 28, Gate No.3, Abhimanshree Society, Behind Volkaswagan Showroom,, University Pashan Road, Pashan, Pune, Maharashtra 411008</string>
-    <string name="contactno">9167665654</string>
+    <string name="address1">Pipla Fata Road, Near Hudkeshwar, Hudkeshwar, Nagpur, Maharashtra 440034</string>
+    <string name="contactno"> 090210 37815</string>
 
     <string-array name="std_lists">
         <item>1 std section A</item>
@@ -112,8 +112,8 @@
 
     <string-array name="catagery">
         <item>-- Select --</item>
-        <item>Parent</item>
         <item>Teacher</item>
+        <item>Parent</item>
         <item>Bus</item>
     </string-array>
 

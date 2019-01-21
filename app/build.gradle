@@ -3,11 +3,11 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.solutions.planet.world.andriod.schoolmanagmentsystem"
+        applicationId "com.solution.planet.world.andriod.jawahargurukulenglishschool"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "3.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -41,7 +41,5 @@ dependencies {
     //volley
     implementation 'com.android.volley:volley:1.1.0'
 
-    //view gif
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
 
 }
